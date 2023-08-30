@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista paises</title>
+</head>
+<body>
+    <h1>Lista Poblacion</h1>
+    <table>
+        <tr>
+            <th>Poblacion</th>
+            <th>Nombre</th>
+            <th>Capital</th>
+            <th>Continente</th>
+        </tr>
+        <tr th:each="paises : ${paises}">
+            <td th:text="${paises.poblacion}"></td>
+            <td th:text="${paises.nombre}"></td>
+            <td th:text="${paises.capital}"></td>
+             <td th:text="${paises.continente}"></td>
+        </tr>
+    </table>
+</body>
+</html>

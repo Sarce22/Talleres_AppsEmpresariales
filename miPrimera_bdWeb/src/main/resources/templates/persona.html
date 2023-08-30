@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+   <title>Detalles de las Personas</title>
+</head>
+<body>
+	 <h1>Informacion de las personas</h1>
+	 
+	 <table>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Correo</th>
+            <th>Numero</th>
+        </tr>
+        <tr th:each="personas : ${personas}">
+            <td th:text="${personas.cedula}"></td>
+            <td th:text="${personas.nombre}"></td>
+             <td th:text="${personas.apellido}"></td>
+              <td th:text="${personas.correo}"></td>
+            <td th:text="${personas.numero}"></td>
+        </tr>
+    </table>
+   
+</body>
+</html>

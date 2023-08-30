@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Usuarios</title>
+</head>
+<body>
+    <h1>Lista de Usuarios</h1>
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Pais</th>
+            <th>Liga</th>
+            <th>Año</th>
+            <th>Entrenador</th>
+            <th>Nombre estadio</th>
+            
+        </tr>
+        <tr th:each="equipos : ${equipos}">
+            <td th:text="${equipos.nombre}"></td>
+            <td th:text="${equipos.pais}"></td>
+            <td th:text="${equipos.liga}"></td>
+            <td th:text="${equipos.anio}"></td>
+            <td th:text="${equipos.entrenador}"></td>
+            <td th:text="${equipos.nombre_estadio}"></td>
+        </tr>
+    </table>
+</body>
+</html>
